@@ -1,0 +1,101 @@
+Воспроизводимые эксперименты лабораторной №3
+Одномерный вход: 77 °C; нечеткое наблюдение: triangle(71,77,83).
+Три входа: температура 77 °C; загрузка 68 %; запылённость 6.5 балла.
+case | method | implication | aggregation | И | centroid | area
+single_crisp | max_min | mamdani | max | min | 66.379310 | 17.400000
+single_crisp | max_product | mamdani | max | min | 66.379310 | 17.400000
+single_crisp | activation | mamdani | max | min | 66.379310 | 17.400000
+single_fuzzy | max_min | mamdani | max | min | 66.644535 | 23.264286
+single_fuzzy | max_product | mamdani | max | min | 66.586867 | 18.135069
+single_fuzzy | activation | mamdani | max | min | 66.644535 | 23.264286
+single_implications | activation | mamdani | max | min | 66.379310 | 17.400000
+multi_implications | activation | mamdani | max | min | 66.840849 | 22.988333
+single_implications | activation | mamdani | min | min | не определён | 0.000000
+multi_implications | activation | mamdani | min | min | не определён | 0.000000
+single_implications | activation | mamdani | probor | min | 66.032258 | 18.600000
+multi_implications | activation | mamdani | probor | min | 71.816367 | 38.319054
+single_implications | activation | mamdani | bounded_sum | min | 65.909091 | 19.800000
+multi_implications | activation | mamdani | bounded_sum | min | 73.308930 | 48.185833
+single_implications | activation | larsen | max | min | 67.521739 | 13.800000
+multi_implications | activation | larsen | max | min | 66.858523 | 17.123889
+single_implications | activation | larsen | min | min | не определён | 0.000000
+multi_implications | activation | larsen | min | min | не определён | 0.000000
+single_implications | activation | larsen | probor | min | 67.123252 | 14.600111
+multi_implications | activation | larsen | probor | min | 71.271548 | 27.870360
+single_implications | activation | larsen | bounded_sum | min | 67.000000 | 15.000000
+multi_implications | activation | larsen | bounded_sum | min | 71.941176 | 34.000000
+single_implications | activation | kleene_dienes | max | min | 55.000000 | 90.000000
+multi_implications | activation | kleene_dienes | max | min | 55.000000 | 90.000000
+single_implications | activation | kleene_dienes | min | min | 60.000000 | 27.000000
+multi_implications | activation | kleene_dienes | min | min | 55.000000 | 36.600000
+single_implications | activation | kleene_dienes | probor | min | 55.000000 | 90.000000
+multi_implications | activation | kleene_dienes | probor | min | 55.000000 | 90.000000
+single_implications | activation | kleene_dienes | bounded_sum | min | 55.000000 | 90.000000
+multi_implications | activation | kleene_dienes | bounded_sum | min | 55.000000 | 90.000000
+single_implications | activation | lukasiewicz | max | min | 55.000000 | 90.000000
+multi_implications | activation | lukasiewicz | max | min | 55.000000 | 90.000000
+single_implications | activation | lukasiewicz | min | min | 61.288462 | 31.200000
+multi_implications | activation | lukasiewicz | min | min | 55.116934 | 40.500000
+single_implications | activation | lukasiewicz | probor | min | 55.000000 | 90.000000
+multi_implications | activation | lukasiewicz | probor | min | 55.000000 | 90.000000
+single_implications | activation | lukasiewicz | bounded_sum | min | 55.000000 | 90.000000
+multi_implications | activation | lukasiewicz | bounded_sum | min | 55.000000 | 90.000000
+composition_implications | max_min | mamdani | max | min | 66.644535 | 23.264286
+composition_implications | max_min | mamdani | min | min | не определён | 0.000000
+composition_implications | max_min | larsen | max | min | 66.979870 | 19.831161
+composition_implications | max_min | larsen | min | min | не определён | 0.000000
+composition_implications | max_min | kleene_dienes | max | min | 55.000000 | 90.000000
+composition_implications | max_min | kleene_dienes | min | min | 56.595692 | 43.163095
+composition_implications | max_min | lukasiewicz | max | min | 55.000000 | 90.000000
+composition_implications | max_min | lukasiewicz | min | min | 57.823147 | 47.699405
+composition_implications | max_product | mamdani | max | min | 66.586867 | 18.135069
+composition_implications | max_product | mamdani | min | min | не определён | 0.000000
+composition_implications | max_product | larsen | max | min | 67.539568 | 14.251667
+composition_implications | max_product | larsen | min | min | не определён | 0.000000
+composition_implications | max_product | kleene_dienes | max | min | 55.000000 | 90.000000
+composition_implications | max_product | kleene_dienes | min | min | 59.401759 | 28.660417
+composition_implications | max_product | lukasiewicz | max | min | 55.000000 | 90.000000
+composition_implications | max_product | lukasiewicz | min | min | 60.670130 | 32.749653
+multi_product_and | activation | mamdani | max | product | 64.788873 | 12.834067
+
+Подробный ход базового вывода для трёх входов:
+
+Охлаждение компьютера с учётом температуры загрузки и запылённости
+Входы: {'temperature': 77.0, 'load': 68.0, 'dust': 6.5}
+Механизм: Уровни истинности предпосылок; импликация: mamdani; агрегация: max; И: min
+Степени принадлежности (для нечеткого входа — степени совместимости):
+  temperature: низкая=0.000000; средняя=0.733333; высокая=0.266667
+  load: низкая=0.000000; средняя=0.640000; высокая=0.360000
+  dust: низкая=0.000000; средняя=0.700000; высокая=0.300000
+Уровни истинности всех правил:
+  R01: alpha=0.000000 -> минимальная
+  R02: alpha=0.000000 -> очень_низкая
+  R03: alpha=0.000000 -> очень_низкая
+  R04: alpha=0.000000 -> очень_низкая
+  R05: alpha=0.000000 -> очень_низкая
+  R06: alpha=0.000000 -> низкая
+  R07: alpha=0.000000 -> очень_низкая
+  R08: alpha=0.000000 -> низкая
+  R09: alpha=0.000000 -> низкая
+  R10: alpha=0.000000 -> низкая
+  R11: alpha=0.000000 -> средняя
+  R12: alpha=0.000000 -> средняя
+  R13: alpha=0.000000 -> средняя
+  R14: alpha=0.640000 -> средняя
+  R15: alpha=0.300000 -> высокая
+  R16: alpha=0.000000 -> средняя
+  R17: alpha=0.360000 -> высокая
+  R18: alpha=0.300000 -> высокая
+  R19: alpha=0.000000 -> высокая
+  R20: alpha=0.000000 -> очень_высокая
+  R21: alpha=0.000000 -> очень_высокая
+  R22: alpha=0.000000 -> очень_высокая
+  R23: alpha=0.266667 -> очень_высокая
+  R24: alpha=0.266667 -> максимальная
+  R25: alpha=0.000000 -> очень_высокая
+  R26: alpha=0.266667 -> максимальная
+  R27: alpha=0.266667 -> максимальная
+Площадь выходного множества: 22.988333
+Центр тяжести: 66.840849 %
+
+Сохранено экспериментов: 55. Файлы: results/

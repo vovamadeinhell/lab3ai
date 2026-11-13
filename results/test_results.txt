@@ -1,0 +1,20 @@
+test_aggregation_formulas (test_fuzzy.FuzzyTests) ... ok
+test_all_27_combinations_are_covered (test_fuzzy.FuzzyTests) ... ok
+test_bad_base_rejected (test_fuzzy.FuzzyTests) ... ok
+test_bad_input_rejected (test_fuzzy.FuzzyTests) ... ok
+test_centroid_nonuniform_grid (test_fuzzy.FuzzyTests) ... ok
+test_crisp_mechanisms_agree_off_grid (test_fuzzy.FuzzyTests) ... ok
+test_empty_output_is_reported (test_fuzzy.FuzzyTests) ... ok
+test_fuzzy_mamdani_reduction (test_fuzzy.FuzzyTests) ... ok
+test_grid_refinement (test_fuzzy.FuzzyTests) ... ok
+test_implication_formulas (test_fuzzy.FuzzyTests) ... ok
+test_logical_implications_do_not_skip_zero_rules (test_fuzzy.FuzzyTests) ... ok
+test_membership_and_shoulders (test_fuzzy.FuzzyTests) ... ok
+test_multi_rule_strengths (test_fuzzy.FuzzyTests) ... ok
+test_seven_rule_crisp_example (test_fuzzy.FuzzyTests) ... ok
+test_two_compositions_independent_example (test_fuzzy.FuzzyTests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.818s
+
+OK
